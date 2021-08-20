@@ -1,0 +1,9 @@
+version: "3.9"
+
+services: 
+  vtsmirror:
+    build:  .
+    ports:
+      - "8001:8001"
+    volumes:
+      - .:/usr/src/app
