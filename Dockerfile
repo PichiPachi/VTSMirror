@@ -1,10 +1,12 @@
-FROM python:3
+FROM node:14.17.5
 
 WORKDIR /usr/src/app
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY package*.json ./
+RUN npm install
 
 COPY . .
 
-CMD [ "python", "./main.py" ]
+# For development the testing is done on port 8001
+EXPOSE 8001
+CMD [ "node", "server.js" ]

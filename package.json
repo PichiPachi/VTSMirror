@@ -1,0 +1,9 @@
+{
+    "name": "vts-mirror",
+    "version": "1.0.0",
+    "author": "pichii",
+    "scripts":{
+        "start": "node server.js",
+        "client": "node client.js"
+    }
+}
